@@ -1,0 +1,2 @@
+# Ignore Node Modules while uploading to GitHub
+/node_modules
