@@ -1,2 +1,112 @@
-<h1>Hello, world</h1>
-<p>my code is running</p>
+<!-- Banner Start -->
+
+<section class="banner-container">
+
+    <div class="banner-left">
+        <h1>FoodScript - Where Flavor Meets Code</h1>
+        <p>Discover the art of culinary coding with FoodScript. Dive into a world where recipes are algorithms and taste is the ultimate output. Unleash your creativity and savor the fusion of flavors and functions.</p>
+    </div>
+
+    <div class="banner-right">
+        <img src="/assets/images/banner.png" alt="">
+    </div>
+
+</section>
+
+<!-- Banner End -->
+
+
+
+
+
+
+<!-- Categories Start -->
+
+<section class="categories-container">
+
+    <div class="categories-header">
+        <h3>Categories</h3>
+        <a href="/categories">View More</a>
+    </div>
+
+    <div class="categories-content">
+        <% if (categories != "") { %> 
+            <% categories.forEach(category => { %>
+                <div class="categories-card">    
+                    <a href="">
+                        <img src="/assets/images/<%- category.image %>" alt="<%- category.name %>">
+                        <h4><%- category.name %></h4>
+                    </a>
+                </div>
+            <% }) %>
+        <% } %> 
+        <div class="categories-card">
+            <a href="/categories">
+                <img src="/assets/images/view-all.jpg" alt="View All">
+                <h4>View All</h4>
+            </a>          
+        </div>
+    </div>
+
+</section>
+
+<!-- Categories End -->
+
+
+
+<!-- Latest Start -->
+
+<section class="categories-container">
+    
+    <div class="categories-header">
+        <h3>Latest Recipes</h3>
+        <a href="/">View More</a>
+    </div>
+
+    <div class="categories-content">
+        <% if (food != "") { %> 
+            <% food.latest.forEach(recipe => { %>
+                <div class="categories-card categories-card-large">    
+                    <a href="">
+                        <img src="/assets/uploads/<%= recipe.image %>" alt="<%= recipe.name %>">
+                        <h4><%= recipe.name %></h4>
+                    </a>
+                </div>
+            <% }) %>
+        <% } else { %> 
+            <h3>No items found.</h3>
+        <% } %>    
+    </div>
+    
+</section>
+
+<!-- Latest End -->
+
+<!-- American Start -->
+
+<section class="categories-container">
+    
+    <div class="categories-header">
+        <h3>American Foods</h3>
+        <a href="/">View More</a>
+    </div>
+
+    <div class="categories-content">
+        <% if (food != "") { %> 
+            <% food.american.forEach(recipe => { %>
+                <div class="categories-card categories-card-large">    
+                    <a href="">
+                        <img src="/assets/uploads/<%= recipe.image %>" alt="<%= recipe.name %>">
+                        <h4><%= recipe.name %></h4>
+                    </a>
+                </div>
+            <% }) %>
+        <% } else { %> 
+            <h3>No items found.</h3>
+        <% } %>    
+    </div>
+    
+</section>
+
+<!-- American End -->
+

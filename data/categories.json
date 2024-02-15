@@ -1,0 +1,26 @@
+[
+    {
+        "name": "American",
+        "image": "american-food.jpg"
+    },
+    {
+        "name": "Mexican",
+        "image": "mexican-food.jpg"
+    },
+    {
+        "name": "Italian",
+        "image": "italian-food.jpg"
+    },
+    {
+        "name": "Japanese",
+        "image": "japanese-food.jpg"
+    },
+    {
+        "name": "Uzbek",
+        "image": "uzbek-food.jpg"
+    },
+    {
+        "name": "Russian",
+        "image": "russian-food.jpg"
+    }
+]

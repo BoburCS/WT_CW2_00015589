@@ -3,13 +3,61 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>
-			<%= typeof title != 'undefined' ? title: 'Bobur | Homepage' %>
-		</title>
-		<link rel="stylesheet" href="/css/index.css" />
+		<title><%= typeof title != 'undefined' ? title: 'FoodScript' %></title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/css/index.css"/>
 	</head>
 	<body>
-		<main><%- body -%></main>
+
+        <div class="main-wrapper">
+
+            <!-- Header Start -->
+            <header>
+                <nav class="navbar">
+
+                    <div class="navbar-left">
+                        <a href="/">
+                            <img src="/assets/favicon/icon-nodejs.svg" alt="Logo NodeJS">
+                            <div class="logo-content">
+                                <h4>FoodScript</h4>
+                                <span>Made with NodeJS</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="navbar-center">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="">Recipe</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="navbar-right">
+                        <button>Log In</button>
+                        <button>Sign Up</button>
+                    </div>
+
+                </nav>
+            </header>
+            <!-- Header End -->
+
+            <!-- Main Start -->
+		    <main><%- body -%></main>
+            <!-- Main End -->
+        
+            <!-- Footer Start -->
+            <footer>
+
+                <p>Build by Bobby</p>
+
+            </footer>
+            <!-- Footer End -->
+
+        </div>
 
         <script src="/js/index.js"></script>
 	</body>
