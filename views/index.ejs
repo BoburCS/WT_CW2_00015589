@@ -33,7 +33,7 @@
         <% if (categories != "") { %> 
             <% categories.forEach(category => { %>
                 <div class="categories-card">    
-                    <a href="">
+                    <a href="/categories/<%- category.name %>">
                         <img src="/assets/images/<%- category.image %>" alt="<%- category.name %>">
                         <h4><%- category.name %></h4>
                     </a>
@@ -60,14 +60,14 @@
     
     <div class="categories-header">
         <h3>Latest Recipes</h3>
-        <a href="/">View More</a>
+        <a href="/latest-recipes">View More</a>
     </div>
 
     <div class="categories-content">
         <% if (food != "") { %> 
             <% food.latest.forEach(recipe => { %>
                 <div class="categories-card categories-card-large">    
-                    <a href="">
+                    <a href="/recipe/<%= recipe.id %>">
                         <img src="/assets/uploads/<%= recipe.image %>" alt="<%= recipe.name %>">
                         <h4><%= recipe.name %></h4>
                     </a>
@@ -88,14 +88,14 @@
     
     <div class="categories-header">
         <h3>American Foods</h3>
-        <a href="/">View More</a>
+        <a href="/categories/American">View More</a>
     </div>
 
     <div class="categories-content">
         <% if (food != "") { %> 
             <% food.american.forEach(recipe => { %>
                 <div class="categories-card categories-card-large">    
-                    <a href="">
+                    <a href="/recipe/<%= recipe.id %>">
                         <img src="/assets/uploads/<%= recipe.image %>" alt="<%= recipe.name %>">
                         <h4><%= recipe.name %></h4>
                     </a>

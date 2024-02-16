@@ -1,74 +1,147 @@
 [
-    {
-        "category": "American",
-        "name": "Burger",
-        "description": "A hamburger is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun.",
-        "ingredients": ["Bun", "Beef Patty", "Lettuce", "Tomato", "Onion", "Pickles", "Ketchup", "Mustard", "Mayonnaise"],
-        "id": "1",
-        "email": "hello@gmail.com",
-        "image": "burger.jpg"
-    },
-    {
-        "category": "Uzbek",
-        "name": "Plov",
-        "description": "Plov is a dish in Uzbek cuisine made with rice, pieces of meat, grated carrots, and onions.",
-        "ingredients": ["Rice", "Lamb", "Carrots", "Onion", "Garlic", "Cumin", "Coriander", "Raisins"],
-        "id": "6",
-        "email": "plov@gmail.com",
-        "image": "plov.jpg"
-    },
-    {
-        "category": "Mexican",
-        "name": "Taco",
-        "description": "A taco is a traditional Mexican dish consisting of a small hand-sized corn or wheat tortilla topped with a filling.",
-        "ingredients": ["Tortilla", "Beef", "Lettuce", "Tomato", "Onion", "Cheese", "Salsa", "Sour Cream"],
-        "id": "2",
-        "email": "taco@gmail.com",
-        "image": "taco.jpg"
-    },
-    {
-        "category": "American",
-        "name": "Hot Dog",
-        "description": "A hot dog is a grilled or steamed food where a sausage is served in the slit of a partially sliced bun.",
-        "ingredients": ["Bun", "Sausage", "Ketchup", "Mustard", "Relish", "Onion", "Sauerkraut", "Cheese"],
-        "id": "4",
-        "email": "hotdog@gmail.com",
-        "image": "hotdog.jpg"
-    },
-    {
-        "category": "Japanese",
-        "name": "Sushi",
-        "description": "Sushi is a Japanese dish of prepared vinegared rice, usually with some sugar and salt, accompanying a variety of ingredients.",
-        "ingredients": ["Rice", "Nori", "Fish", "Vegetables", "Soy Sauce", "Wasabi", "Ginger"],
-        "id": "5",
-        "email": "sushi@gmail.com",
-        "image": "sushi.jpg"
-    },
-    {
-        "category": "Italian",
-        "name": "Pizza",
-        "description": "Pizza is a savory dish of Italian origin, consisting of a usually round, flattened base of leavened wheat-based dough.",
-        "ingredients": ["Dough", "Tomato Sauce", "Mozzarella Cheese", "Basil", "Oregano", "Tomato", "Onion", "Mushroom", "Pepperoni"],
-        "id": "3",
-        "email": "pizza@gmail.com",
-        "image": "pizza.jpg"
-    },
-    {
-        "category": "Russian",
-        "name": "Borscht",
-        "description": "Borscht is a sour soup common in Eastern Europe and Northern Asia. In English, the word borscht is most often associated with the soup's variant of Ukrainian origin.",
-        "ingredients": ["Beef", "Beet", "Cabbage", "Carrots", "Onion", "Potato", "Tomato", "Garlic"],
-        "id": "7",
-        "email": "borscht@gmail.com",
-        "image": "borscht.jpg"
-    },
-    {
-        "category": "Italian",
-        "name": "Lasagna",
-        "description": "Lasagne are a type of wide, flat pasta, possibly one of the oldest types of pasta.",
-        "ingredients": ["Pasta", "Beef", "Tomato Sauce", "Mozzarella Cheese", "Ricotta Cheese", "Parmesan Cheese", "Basil", "Oregano"],
-        "id": "8",
-        "email": "lasagna@gmail.com",
-        "image": "lasagna.jpg"
-    }
+  {
+    "category": "American",
+    "name": "Burger",
+    "description": "A hamburger is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun.",
+    "ingredients": [
+      "Bun",
+      "Beef Patty",
+      "Lettuce",
+      "Tomato",
+      "Onion",
+      "Pickles",
+      "Ketchup",
+      "Mustard",
+      "Mayonnaise"
+    ],
+    "id": "1",
+    "email": "hello@gmail.com",
+    "image": "burger.jpg"
+  },
+  {
+    "category": "Uzbek",
+    "name": "Plov",
+    "description": "Plov is a dish in Uzbek cuisine made with rice, pieces of meat, grated carrots, and onions.",
+    "ingredients": [
+      "Rice",
+      "Lamb",
+      "Carrots",
+      "Onion",
+      "Garlic",
+      "Cumin",
+      "Coriander",
+      "Raisins"
+    ],
+    "id": "6",
+    "email": "plov@gmail.com",
+    "image": "plov.jpg"
+  },
+  {
+    "category": "Mexican",
+    "name": "Taco",
+    "description": "A taco is a traditional Mexican dish consisting of a small hand-sized corn or wheat tortilla topped with a filling.",
+    "ingredients": [
+      "Tortilla",
+      "Beef",
+      "Lettuce",
+      "Tomato",
+      "Onion",
+      "Cheese",
+      "Salsa",
+      "Sour Cream"
+    ],
+    "id": "2",
+    "email": "taco@gmail.com",
+    "image": "taco.jpg"
+  },
+  {
+    "category": "American",
+    "name": "Hot Dog",
+    "description": "A hot dog is a grilled or steamed food where a sausage is served in the slit of a partially sliced bun.",
+    "ingredients": [
+      "Bun",
+      "Sausage",
+      "Ketchup",
+      "Mustard",
+      "Relish",
+      "Onion",
+      "Sauerkraut",
+      "Cheese"
+    ],
+    "id": "4",
+    "email": "hotdog@gmail.com",
+    "image": "hotdog.jpg"
+  },
+  {
+    "category": "Japanese",
+    "name": "Sushi",
+    "description": "Sushi is a Japanese dish of prepared vinegared rice, usually with some sugar and salt, accompanying a variety of ingredients.",
+    "ingredients": [
+      "Rice",
+      "Nori",
+      "Fish",
+      "Vegetables",
+      "Soy Sauce",
+      "Wasabi",
+      "Ginger"
+    ],
+    "id": "5",
+    "email": "sushi@gmail.com",
+    "image": "sushi.jpg"
+  },
+  {
+    "category": "Italian",
+    "name": "Pizza",
+    "description": "Pizza is a savory dish of Italian origin, consisting of a usually round, flattened base of leavened wheat-based dough.",
+    "ingredients": [
+      "Dough",
+      "Tomato Sauce",
+      "Mozzarella Cheese",
+      "Basil",
+      "Oregano",
+      "Tomato",
+      "Onion",
+      "Mushroom",
+      "Pepperoni"
+    ],
+    "id": "3",
+    "email": "pizza@gmail.com",
+    "image": "pizza.jpg"
+  },
+  {
+    "category": "Russian",
+    "name": "Borscht",
+    "description": "Borscht is a sour soup common in Eastern Europe and Northern Asia. In English, the word borscht is most often associated with the soup's variant of Ukrainian origin.",
+    "ingredients": [
+      "Beef",
+      "Beet",
+      "Cabbage",
+      "Carrots",
+      "Onion",
+      "Potato",
+      "Tomato",
+      "Garlic"
+    ],
+    "id": "7",
+    "email": "borscht@gmail.com",
+    "image": "borscht.jpg"
+  },
+  {
+    "category": "Italian",
+    "name": "Lasagna",
+    "description": "Lasagne are a type of wide, flat pasta, possibly one of the oldest types of pasta.",
+    "ingredients": [
+      "Pasta",
+      "Beef",
+      "Tomato Sauce",
+      "Mozzarella Cheese",
+      "Ricotta Cheese",
+      "Parmesan Cheese",
+      "Basil",
+      "Oregano"
+    ],
+    "id": "8",
+    "email": "lasagna@gmail.com",
+    "image": "lasagna.jpg"
+  }
 ]

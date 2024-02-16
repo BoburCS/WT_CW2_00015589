@@ -1,0 +1,54 @@
+<h1>Recipes</h1>
+<% if(recipe != null ) { %>
+
+    <nav class="breadcrumb">
+        <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/categories/<%= recipe.category %>"><%= recipe.category %></a></li>
+            <li><a href="/recipe/<%= recipe.id %>"><%= recipe.name %></a></li>
+        </ol>
+    </nav>
+  
+    <section class="recipe">
+
+        <div class="recipe-image">
+            <img src="/assets/uploads/<%- recipe.image %>" alt="<%- recipe.name %>">
+        </div>
+
+        <div class="recipe-content">
+
+            <div class="recipe-top">
+                <h1><%= recipe.name %></h1>
+
+                <div class="recipe-top-info">
+                    <p><%= recipe.category%></p>
+                    <p><%= recipe.email %></p>
+                </div>
+
+            </div>
+            
+            <div class="recipe-bottom">
+                <h1>Cooking Instructions</h1>
+
+                <div class="description">
+                    <h4>Description</h4>
+                    <p><%= recipe.description %></p>
+                </div>
+
+                <div class="ingredients">
+                    <h4>Ingredients</h4>
+                    <ol>
+                        <% recipe.ingredients.forEach(ingredient => { %>
+                            <li><%= ingredient %></li>
+                        <% }) %>
+                    </ol>
+                </div>
+
+            </div>
+            
+        </div>
+
+    </section>
+  <% } else { %>
+    <h4>No item found.</h4>
+  <% } %>

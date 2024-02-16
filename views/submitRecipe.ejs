@@ -1,0 +1,65 @@
+<h1>Share your recipe with others</h1>
+
+<!-- Form Submit Start -->
+
+<form action="/submit-recipe" enctype="multipart/form-data" method="POST">
+
+    <% if (message) { %>
+        <div class="alert alert-success"><%= message %></div>
+    <% } %>
+    <% if (error) { %>
+        <div class="alert alert-danger"><%= error %></div>
+    <% } %>
+
+    <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+    </div>
+
+    <div>
+        <label for="name">Recipe Name</label>
+        <input type="text" name="name" id="name" required>
+    </div>
+
+    <div>
+        <label for="description">Recipe Description</label>
+        <textarea name="description" id="description" cols="30" rows="4"></textarea>
+    </div>
+
+    <div>
+        <label for="ingredients">Recipe Ingredients</label>
+        <small>Example: Meat</small>
+        
+        <div class="ingredientList">
+            <input type="text" name="ingredients">
+        </div>
+
+        <button type="button" id="btnAddIngredient">+Add Ingredient</button>
+    </div>
+
+    <div>
+        <label for="category">Select Category</label>
+        <select name="category" id="categorySelect">
+            <option selected>Select Category</option>
+            <option value="American">American</option>
+            <option value="Uzbek">Uzbek</option>
+            <option value="Mexican">Mexican</option>
+            <option value="Russian">Russian</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Italian">Italian</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="image">Recipe Image</label>
+        <input type="file" name="image" accept="image/*">
+    </div>
+
+    <div>
+        <button type="submit">Share Recipe</button>
+    </div>    
+    
+</form>
+
+
+<!-- Form Submit End-->
