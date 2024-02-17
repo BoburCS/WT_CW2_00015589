@@ -1,43 +1,43 @@
-<h1>Share your recipe with others</h1>
+<h4 class="fs-xl p-bottom-1">Share your recipe with others</h4>
 
 <!-- Form Submit Start -->
 
-<form action="/submit-recipe" enctype="multipart/form-data" method="POST">
+<% if (successObject) { %>
+    <div><%= successObject %></div>
+<% } %>
+<% if (errorObject) { %>
+    <div><%= errorObject %></div>
+<% } %>
 
-    <% if (message) { %>
-        <div class="alert alert-success"><%= message %></div>
-    <% } %>
-    <% if (error) { %>
-        <div class="alert alert-danger"><%= error %></div>
-    <% } %>
+<form action="/submit-recipe" enctype="multipart/form-data" method="POST" class="m-auto w-50 flex-column g-3">
 
-    <div>
+    <div class="flex-column g-1">
         <label for="email">Email</label>
         <input type="email" name="email" id="email" required>
     </div>
 
-    <div>
+    <div class="flex-column g-1">
         <label for="name">Recipe Name</label>
         <input type="text" name="name" id="name" required>
     </div>
 
-    <div>
+    <div class="flex-column g-1">
         <label for="description">Recipe Description</label>
-        <textarea name="description" id="description" cols="30" rows="4"></textarea>
+        <textarea name="description" id="description" cols="30" rows="3"></textarea>
     </div>
 
-    <div>
-        <label for="ingredients">Recipe Ingredients</label>
+    <div class="flex-column g-1">
+        <label>Recipe Ingredients</label>
         <small>Example: Meat</small>
         
-        <div class="ingredientList">
+        <div class="ingredientList flex-column g-1">
             <input type="text" name="ingredients">
         </div>
 
-        <button type="button" id="btnAddIngredient">+Add Ingredient</button>
+        <button class="w-50" type="button" id="btnAddIngredient">+Add Ingredient</button>
     </div>
 
-    <div>
+    <div class="flex-column g-1">
         <label for="category">Select Category</label>
         <select name="category" id="categorySelect">
             <option selected>Select Category</option>
@@ -50,13 +50,13 @@
         </select>
     </div>
 
-    <div>
+    <div class="flex-column g-1">
         <label for="image">Recipe Image</label>
         <input type="file" name="image" accept="image/*">
     </div>
 
     <div>
-        <button type="submit">Share Recipe</button>
+        <button class="w-100" type="submit">Share Recipe</button>
     </div>    
     
 </form>

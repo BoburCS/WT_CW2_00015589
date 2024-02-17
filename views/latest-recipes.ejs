@@ -1,24 +1,23 @@
-<h1>Latest Recipes</h1>
+<h1 class="fs-xl">Latest Recipes</h1>
 
 <!-- Breadcrumb Start -->
-
-<nav class="breadcrumb">
+<nav class="breadcrumb m-bottom-3">
     <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/latest-recipes">Latest</a></li>
     </ol>
 </nav>
-
 <!-- Breadcrumb End -->
 
-<!-- Latest Recipes start -->
 
-<div class="grid">
+
+<!-- Latest Recipes start -->
+<div class="grid-5 g-3">
     <% if (latest != "") { %> 
         <% latest.forEach(recipe => { %>
-            <div class="grid-card">    
+            <div class="card-hv ts">    
                 <a href="/recipe/<%= recipe.id %>">
-                    <img src="/assets/uploads/<%= recipe.image %>" alt="<%= recipe.name %>">
+                    <img src="/assets/uploads/<%= recipe.image %>" class="w-100 h-260" alt="<%= recipe.name %>">
                     <h4><%= recipe.name %></h4>
                 </a>
             </div>
@@ -27,5 +26,4 @@
         <h3>No items found.</h3>
     <% } %>    
 </div>
-
 <!-- latest recipes end -->

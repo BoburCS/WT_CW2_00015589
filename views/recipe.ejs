@@ -1,54 +1,57 @@
-<h1>Recipes</h1>
+<h1 class="fs-xxl">Recipes</h1>
 <% if(recipe != null ) { %>
 
-    <nav class="breadcrumb">
+    <!-- Breadcrumb Start -->
+    <nav class="breadcrumb m-bottom-3">
         <ol>
             <li><a href="/">Home</a></li>
             <li><a href="/categories/<%= recipe.category %>"><%= recipe.category %></a></li>
             <li><a href="/recipe/<%= recipe.id %>"><%= recipe.name %></a></li>
         </ol>
     </nav>
-  
-    <section class="recipe">
+    <!-- Breadcrumb End -->
 
-        <div class="recipe-image">
-            <img src="/assets/uploads/<%- recipe.image %>" alt="<%- recipe.name %>">
+    <!-- Recipe Start -->
+    <section class="flex g-5">
+        <!-- Image Start -->
+        <div>
+            <img src="/assets/uploads/<%- recipe.image %>" class="h-540" alt="<%- recipe.name %>">
         </div>
+        <!-- Image End -->
 
-        <div class="recipe-content">
+        <!-- Content Start -->
+        <div>
+            <div class="m-bottom-3">
+                <h2 class="p-bottom-1 fs-xl bb"><%= recipe.name %></h2>
 
-            <div class="recipe-top">
-                <h1><%= recipe.name %></h1>
-
-                <div class="recipe-top-info">
-                    <p><%= recipe.category%></p>
-                    <p><%= recipe.email %></p>
+                <div class="flex-align-center g-3">
+                    <p class="fs-1 m-top-mini"><%= recipe.category%></p>
+                    <p class="fs-1 m-top-mini"><%= recipe.email %></p>
                 </div>
-
             </div>
             
-            <div class="recipe-bottom">
-                <h1>Cooking Instructions</h1>
+            <div>
+                <h2 class="p-bottom-1 fs-xl bb">Cooking Instructions</h2>
 
-                <div class="description">
-                    <h4>Description</h4>
-                    <p><%= recipe.description %></p>
+                <div class="m-bottom-1">
+                    <h3 class="fs-3">Description</h3>
+                    <p class="fs-2"><%= recipe.description %></p>
                 </div>
 
                 <div class="ingredients">
-                    <h4>Ingredients</h4>
+                    <h3 class="fs-3">Ingredients</h3>
                     <ol>
                         <% recipe.ingredients.forEach(ingredient => { %>
-                            <li><%= ingredient %></li>
+                            <li class="fs-2"><%= ingredient %></li>
                         <% }) %>
                     </ol>
                 </div>
-
             </div>
-            
         </div>
-
+        <!-- Content End -->
     </section>
+    <!-- Recipe End -->
+
   <% } else { %>
     <h4>No item found.</h4>
   <% } %>

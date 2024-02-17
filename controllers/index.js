@@ -99,11 +99,13 @@ exports.latestRecipes = async (request, response) =>
 }
 
 /**
- * Submit Recipe Get
+ * Submit Recipe GET
  */
 exports.submitRecipe = async (request, response) =>
 {
-    response.render("submitRecipe", { title: "FoodScript | Share your Recipe", message: request.flash("message"), error: request.flash("error") });
+    const errorObject = request.flash("error");
+    const successObject = request.flash("message");
+    response.render("submitRecipe", { title: "FoodScript | Share your Recipe", errorObject, successObject});
 }
 
 /**
@@ -145,18 +147,18 @@ exports.submitRecipePost = async (request, response) =>
             image: newImageName
         };
 
-        const data = fs.readFileSync(path.resolve('./data/recipes.json'));
+        const data = fs.readFileSync(path.resolve("./data/recipes.json"));
         const json = JSON.parse(data);
         json.push(newRecipe);
-        fs.writeFileSync(path.resolve('./data/recipes.json'), JSON.stringify(json, null, 2));
+        fs.writeFileSync(path.resolve("./data/recipes.json"), JSON.stringify(json, null, 2));
         
-        request.flash('message', 'Recipe has been added.');
-        response.redirect('/submit-recipe');
+        request.flash("message", "Recipe has been added.");
+        response.redirect("/submit-recipe");
     } 
     catch (error) 
     {
-        request.flash('error', error.message);
-        response.redirect('/submit-recipe');
+        request.flash("error", error);
+        response.redirect("/submit-recipe");
     }
 }
 

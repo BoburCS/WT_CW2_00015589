@@ -1,74 +1,70 @@
 <!-- Banner Start -->
+<section class="p-bottom-3 bb flex-align-center space-between g-5">
 
-<section class="banner-container">
-
-    <div class="banner-left">
-        <h1>FoodScript - Where Flavor Meets Code</h1>
+    <div class="flex-column g-3">
+        <h2 class="fs-xl">FoodScript - Where Flavor Meets Code</h2>
         <p>Discover the art of culinary coding with FoodScript. Dive into a world where recipes are algorithms and taste is the ultimate output. Unleash your creativity and savor the fusion of flavors and functions.</p>
+    
+        <div>
+            <a href="/latest-recipes" class="txt-white p bg-green br-1">Latest Recipes</a>
+        </div>
     </div>
 
-    <div class="banner-right">
-        <img src="/assets/images/banner.png" alt="">
+    <div>
+        <img src="/assets/images/banner.png" class="w-540" alt="Hero Banner Image">
     </div>
 
 </section>
-
 <!-- Banner End -->
 
 
 
-
-
-
 <!-- Categories Start -->
+<section class="m-top-3 p-bottom-3 bb w-100 flex-column space-between g-3">
 
-<section class="categories-container">
-
-    <div class="categories-header">
+    <div class="flex-align-center space-between">
         <h3>Categories</h3>
-        <a href="/categories">View More</a>
+        <a href="/categories" class="a-ul">View More</a>
     </div>
 
-    <div class="categories-content">
+    <div class="grid-6">
         <% if (categories != "") { %> 
             <% categories.forEach(category => { %>
-                <div class="categories-card">    
+                <div class="w-160px card-hv ts">    
                     <a href="/categories/<%- category.name %>">
-                        <img src="/assets/images/<%- category.image %>" alt="<%- category.name %>">
+                        <img src="/assets/images/<%- category.image %>" class="w-100" alt="<%- category.name %>">
                         <h4><%- category.name %></h4>
                     </a>
                 </div>
             <% }) %>
         <% } %> 
-        <div class="categories-card">
+        <div class="w-160px card-hv ts">
             <a href="/categories">
-                <img src="/assets/images/view-all.jpg" alt="View All">
+                <img src="/assets/images/view-all.jpg" class="w-100" alt="View All">
                 <h4>View All</h4>
             </a>          
         </div>
     </div>
 
 </section>
-
 <!-- Categories End -->
 
 
 
 <!-- Latest Start -->
-
-<section class="categories-container">
+<section class="m-top-3 p-bottom-3 bb w-100 flex-column space-between g-3">
     
-    <div class="categories-header">
+    <div class="flex-align-center space-between">
         <h3>Latest Recipes</h3>
-        <a href="/latest-recipes">View More</a>
+        <a href="/latest-recipes" class="a-ul">View More</a>
     </div>
 
-    <div class="categories-content">
+    <div class="grid-5 g-3">
         <% if (food != "") { %> 
             <% food.latest.forEach(recipe => { %>
-                <div class="categories-card categories-card-large">    
+                <div class="card-hv ts">    
                     <a href="/recipe/<%= recipe.id %>">
-                        <img src="/assets/uploads/<%= recipe.image %>" alt="<%= recipe.name %>">
+                        <img src="/assets/uploads/<%= recipe.image %>" class="w-100 h-260" alt="<%= recipe.name %>">
                         <h4><%= recipe.name %></h4>
                     </a>
                 </div>
@@ -79,24 +75,22 @@
     </div>
     
 </section>
-
 <!-- Latest End -->
 
 <!-- American Start -->
-
-<section class="categories-container">
+<section class="m-top-3 p-bottom-3 bb w-100 flex-column space-between g-3">
     
-    <div class="categories-header">
+    <div class="flex-align-center space-between">
         <h3>American Foods</h3>
-        <a href="/categories/American">View More</a>
+        <a href="/categories/American" class="a-ul">View More</a>
     </div>
 
-    <div class="categories-content">
+    <div class="grid-5 g-3">
         <% if (food != "") { %> 
             <% food.american.forEach(recipe => { %>
-                <div class="categories-card categories-card-large">    
+                <div class="card-hv ts">    
                     <a href="/recipe/<%= recipe.id %>">
-                        <img src="/assets/uploads/<%= recipe.image %>" alt="<%= recipe.name %>">
+                        <img src="/assets/uploads/<%= recipe.image %>" class="w-100 h-260" alt="<%= recipe.name %>">
                         <h4><%= recipe.name %></h4>
                     </a>
                 </div>
@@ -107,6 +101,4 @@
     </div>
     
 </section>
-
 <!-- American End -->
-

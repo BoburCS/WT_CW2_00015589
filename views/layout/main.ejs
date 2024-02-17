@@ -7,28 +7,30 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="/css/index.css"/>
+        <link rel="stylesheet" href="/css/globals.css">
+        <link rel="stylesheet" href="/css/utilities.css">
+		<link rel="stylesheet" href="/css/index.css">
 	</head>
 	<body>
 
-        <div class="main-wrapper">
+        <div class="main-wrapper flex-column g-3">
 
             <!-- Header Start -->
-            <header>
-                <nav class="navbar">
+            <header class="w-100">
+                <nav class="p-bottom-1 bb flex-align-center space-between">
 
-                    <div class="navbar-left">
-                        <a href="/">
+                    <div>
+                        <a href="/" class="flex-align-center">
                             <img src="/assets/favicon/icon-nodejs.svg" alt="Logo NodeJS">
-                            <div class="logo-content">
-                                <h4>FoodScript</h4>
-                                <span>Made with NodeJS</span>
+                            <div class="flex-column">
+                                <h3 class="fs-3">FoodScript</h3>
+                                <span class="fs-1">Made with NodeJS</span>
                             </div>
                         </a>
                     </div>
 
-                    <div class="navbar-center">
-                        <ul>
+                    <div>    
+                        <ul class="flex-align-center g-3">
                             <li><a href="/">Home</a></li>
                             <li><a href="/about">About</a></li>
                             <li><a href="/submit-recipe">Recipe</a></li>
@@ -36,7 +38,7 @@
                         </ul>
                     </div>
 
-                    <div class="navbar-right">
+                    <div class="flex-align-center g-3">
                         <button>Log In</button>
                         <button>Sign Up</button>
                     </div>
@@ -50,7 +52,7 @@
             <!-- Main End -->
         
             <!-- Footer Start -->
-            <footer>
+            <footer class="w-100">
 
                 <p>Build by Bobby</p>
 

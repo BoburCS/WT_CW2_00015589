@@ -7,7 +7,7 @@ const btnAddIngredient = getID("btnAddIngredient");
 function addIngredient ()
 {
     let input = document.createElement("input");
-    input.name = "newRecipeIngredients";
+    input.name = "ingredients";
     ingredientList.append(input);
 }
 

@@ -1,0 +1,116 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Rubik", sans-serif;
+}
+
+:root {
+	--white: #fff;
+	--black: #000000;
+	--green: #00704a;
+}
+
+body {
+	padding: 0 100px;
+	background-image: url("/assets/favicon/icon-bg.svg");
+	background-color: var(--black);
+}
+
+header,
+footer {
+	padding: 30px 50px;
+}
+
+main {
+	padding: 0 50px;
+}
+
+form {
+	padding: 30px;
+	border: 1px solid var(--green);
+	border-radius: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
+}
+
+h4 {
+	text-align: center;
+	font-size: 16px;
+}
+
+p,
+span {
+	font-weight: 500;
+}
+
+a {
+	color: var(--black);
+	font-size: 16px;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+button {
+	color: var(--white);
+	font-size: 16px;
+	font-weight: 500;
+	padding: 10px 16px;
+	border: none;
+	border-radius: 8px;
+	outline: none;
+	background-color: var(--green);
+	cursor: pointer;
+}
+
+input,
+select {
+	padding: 10px 16px;
+	border-radius: 16px;
+	border: 1px solid var(--green);
+	outline: none;
+}
+
+textarea {
+	padding: 10px;
+	border: 1px solid var(--green);
+	border-radius: 16px;
+	outline: none;
+	resize: none;
+}
+
+img {
+	border-radius: 16px;
+	object-fit: cover;
+}
+
+ul,
+ol {
+	list-style-type: none;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+	width: 100%;
+}
+
+.breadcrumb ol {
+	display: flex;
+	gap: 10px;
+}
+
+.breadcrumb ol li::after {
+	padding-left: 5px;
+	content: "/";
+}
+
+.breadcrumb ol li a:hover {
+	text-decoration: underline;
+}
