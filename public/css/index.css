@@ -4,6 +4,6 @@
     background-color: var(--white);
 }
 
-.ingredients ol li:before {
-    content: "- ";
-}
+.menu-bar { display: none; }
+
+.ingredients ol li:before { content: "- "; }

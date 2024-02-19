@@ -1,8 +1,8 @@
 <!-- Banner Start -->
-<section class="p-bottom-3 bb flex-align-center space-between g-5">
+<section class="banner p-bottom-3 bb flex-align-center space-between g-5">
 
-    <div class="flex-column g-3">
-        <h2 class="fs-xl">FoodScript - Where Flavor Meets Code</h2>
+    <div class="banner-content flex-column g-3">
+        <h1 class="fs-xxl">FoodScript - Where Flavor Meets Code</h1>
         <p>Discover the art of culinary coding with FoodScript. Dive into a world where recipes are algorithms and taste is the ultimate output. Unleash your creativity and savor the fusion of flavors and functions.</p>
     
         <div>
@@ -10,7 +10,7 @@
         </div>
     </div>
 
-    <div>
+    <div class="banner-image">
         <img src="/assets/images/banner.png" class="w-540" alt="Hero Banner Image">
     </div>
 
@@ -30,7 +30,7 @@
     <div class="grid-6">
         <% if (categories != "") { %> 
             <% categories.forEach(category => { %>
-                <div class="w-160px card-hv ts">    
+                <div class="card w-160px card-hv ts">    
                     <a href="/categories/<%- category.name %>">
                         <img src="/assets/images/<%- category.image %>" class="w-100" alt="<%- category.name %>">
                         <h4><%- category.name %></h4>
@@ -38,7 +38,7 @@
                 </div>
             <% }) %>
         <% } %> 
-        <div class="w-160px card-hv ts">
+        <div class="card w-160px card-hv ts">
             <a href="/categories">
                 <img src="/assets/images/view-all.jpg" class="w-100" alt="View All">
                 <h4>View All</h4>
@@ -62,7 +62,7 @@
     <div class="grid-5 g-3">
         <% if (food != "") { %> 
             <% food.latest.forEach(recipe => { %>
-                <div class="card-hv ts">    
+                <div class="card card-hv ts">    
                     <a href="/recipe/<%= recipe.id %>">
                         <img src="/assets/uploads/<%= recipe.image %>" class="w-100 h-260" alt="<%= recipe.name %>">
                         <h4><%= recipe.name %></h4>

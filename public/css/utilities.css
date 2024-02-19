@@ -1,7 +1,5 @@
 /* color */
-.txt-white {
-    color: var(--white);
-}
+.txt-white { color: var(--white); }
 
 /* text-decoration */
 .a-ul { text-decoration: underline; }
@@ -11,7 +9,7 @@
 .fs-2 { font-size: 16px; }
 .fs-3 { font-size: 20px; }
 .fs-xl { font-size: 32px; }
-.fs-xxl { font-size: 48px;}
+.fs-xxl { font-size: 48px; }
 
 /*  margin */
 .m-auto { margin: auto; }
@@ -43,9 +41,7 @@
 .br-1 { border-radius: 8px; }
 
 /* background-color */
-.bg-green {
-    background-color: var(--green);
-}
+.bg-green { background-color: var(--green); }
 
 /* display: flex */
 .flex { display: flex; }

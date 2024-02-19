@@ -1,0 +1,81 @@
+@media screen and (max-width: 768px) {
+    /* globals.css */
+    body { padding: 0; }
+    header, footer { padding: 10px 20px; }
+    footer p { text-align: center; }
+    main { padding: 0 20px; }
+    form { padding: 10px; border-radius: 8px; }
+    h4, a { font-size: 14px; }
+    button { font-size: 14px; padding: 6px 10px; }
+    input, select { padding: 6px 10px; border-radius: 8px; }
+    textarea { padding: 8px; border-radius: 8px; }
+    .breadcrumb ol { gap: 6px; }
+
+
+
+    /* index.css */
+    .main-wrapper { width: 100%; }
+    .navbar-center, .navbar-right { display: none; }
+    .menu-bar { display: inline-block; }
+
+    .banner {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .banner-image img { width: 100%; }
+    .banner-content p { text-align: justify; }
+    .banner-content div { align-self: center; }
+
+    .recipe-container {
+        margin: auto;
+        flex-direction: column;
+    }
+    
+    .recipe-container div > img { width: 100%; }
+    .recipe-header h2, .recipe-body h2 { text-align: center; }
+    .recipe-header div { justify-content: space-between; }
+
+    .recipe-form { width: 100%; }
+
+
+
+    /* utilities.css */
+    .fs-2 { font-size: 14px; text-align: justify; }
+    .fs-3 { font-size: 16px; }
+    .fs-xl { font-size: 20px; }
+    .fs-xxl { font-size: 28px; }
+    .h-260 { height: auto; }
+    .h-540 { height: auto; }
+    .g-1 { gap: 5px; }
+    .g-3 { gap: 10px; }
+    .g-5 { gap: 20px; }
+
+    .grid-4 {
+        margin: auto;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-5 {
+        margin: auto;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-6 {
+        margin: auto;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-6 .card { width: 240px; }
+
+
+    
+    @media screen and (min-width: 500px) and (max-width: 768px) {
+        .recipe-container { flex-direction: row; }
+
+        .grid-4 { grid-template-columns: repeat(2, 1fr); }
+        .grid-5 { grid-template-columns: repeat(2, 1fr); }
+        .grid-6 { grid-template-columns: repeat(2, 1fr); }
+        .grid-6 .card { width: 200px; }
+    }
+}

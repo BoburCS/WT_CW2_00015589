@@ -17,14 +17,9 @@ body {
 	background-color: var(--black);
 }
 
-header,
-footer {
-	padding: 30px 50px;
-}
+header, footer { padding: 30px 50px; }
 
-main {
-	padding: 0 50px;
-}
+main { padding: 0 50px; }
 
 form {
 	padding: 30px;
@@ -32,24 +27,14 @@ form {
 	border-radius: 16px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-weight: 700;
-}
+h1, h2, h3, h4, h5, h6 { font-weight: 700; }
 
 h4 {
 	text-align: center;
 	font-size: 16px;
 }
 
-p,
-span {
-	font-weight: 500;
-}
+p, span { font-weight: 500; }
 
 a {
 	color: var(--black);
@@ -91,15 +76,10 @@ img {
 	object-fit: cover;
 }
 
-ul,
-ol {
-	list-style-type: none;
-}
+ul, ol { list-style-type: none; }
 
 /* Breadcrumb */
-.breadcrumb {
-	width: 100%;
-}
+.breadcrumb { width: 100%; }
 
 .breadcrumb ol {
 	display: flex;
@@ -111,6 +91,4 @@ ol {
 	content: "/";
 }
 
-.breadcrumb ol li a:hover {
-	text-decoration: underline;
-}
+.breadcrumb ol li a:hover { text-decoration: underline; }
