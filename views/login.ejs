@@ -1,7 +1,7 @@
-<h1 class="fs-xxl">Log In</h1>
+<h1 class="fs-xxl txt-align-center m-bottom-3">Log In</h1>
 
 <!-- Log In Form Start -->
-<form action="/login" method="POST">
+<form action="/login" method="POST" class="m-auto w-50">
 
     <% if (typeof errors !== 'undefined') { %>
         <% errors.forEach(function(error) { %>
@@ -9,18 +9,18 @@
         <% }) %>
     <% } %>
 
-    <div>
-        <label for="loginEmail">Email:</label>    
+    <div class="m-bottom-3 flex-column">
+        <label for="loginEmail" class="m-bottom-1">Email:</label>    
         <input type="email" name="loginEmail" id="loginEmail" required>
     </div>
     
-    <div>
-        <label for="loginPassword">Password:</label>
+    <div class="m-bottom-3 flex-column">
+        <label for="loginPassword" class="m-bottom-1">Password:</label>
         <input type="password" name="loginPassword" id="loginPassword" required>
     </div>
 
     <div>
-        <button type="submit">Log In</button>
+        <button type="submit" class="w-100">Log In</button>
     </div>
     
 </form>

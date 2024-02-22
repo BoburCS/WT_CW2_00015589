@@ -15,7 +15,7 @@
       "Mayonnaise"
     ],
     "id": "1",
-    "email": "hello@gmail.com",
+    "email": "johndoe77@gmail.com",
     "image": "burger.jpg"
   },
   {
@@ -123,7 +123,7 @@
       "Garlic"
     ],
     "id": "7",
-    "email": "borscht@gmail.com",
+    "email": "johndoe77@gmail.com",
     "image": "borscht.jpg"
   },
   {
@@ -141,7 +141,7 @@
       "Oregano"
     ],
     "id": "8",
-    "email": "lasagna@gmail.com",
+    "email": "johndoe77@gmail.com",
     "image": "lasagna.jpg"
   }
 ]

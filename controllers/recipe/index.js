@@ -162,3 +162,30 @@ exports.submitRecipePost = async (request, response) =>
         response.redirect("/submit-recipe");
     }
 }
+
+/**
+ * Delete Recipe
+ */
+exports.deleteRecipe = async (request, response) =>
+{
+    try 
+    {
+        let recipeId = request.params.id;
+
+        // Find the recipe that is being deleted and Delete the image file
+        let recipeToDelete = recipesData.find(recipe => recipe.id === recipeId);
+        if (recipeToDelete && recipeToDelete.image) {
+            fs.unlinkSync(path.resolve(`./public/assets/uploads/${recipeToDelete.image}`));
+        }
+
+        // Filter out the recipe with the given id and Write the new array back to the JSON file
+        let newRecipesData = recipesData.filter(recipe => recipe.id !== recipeId);
+        fs.writeFileSync(path.resolve("./data/recipes.json"), JSON.stringify(newRecipesData, null, 2));
+
+        response.redirect("/");
+    } 
+    catch (error) 
+    {
+        response.status(500).send({ message: error.message || "Error Occured" });
+    }
+}

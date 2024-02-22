@@ -4,6 +4,8 @@ const { v4: uuid4 } = require("uuid");
 const { validationResult } = require("express-validator");
 const userValidator = require("../../validators/index.js");
 const users = require("../../data/users.json");
+const recipes = require("../../data/recipes.json");
+const { getEnabledCategories } = require("trace_events");
 
 /**
  * Sign Up GET
@@ -44,7 +46,7 @@ exports.signupPost = async (request, response) =>
         
         // Successful registration then go back to homepage
         request.session.user = newUser;
-        response.redirect("/");
+        response.redirect("/profile");
     } 
     catch (error) 
     {
@@ -55,7 +57,7 @@ exports.signupPost = async (request, response) =>
 /**
  * Log In GET
  */
-exports.loginGet = async (request, response) => 
+exports.loginGet = (request, response) => 
 {
     response.render("login", { title: "FoodScript | Log In" } );
 }
@@ -63,23 +65,20 @@ exports.loginGet = async (request, response) =>
 /**
  * Log In POST
  */
-exports.loginPost = async (request, response) => 
+exports.loginPost = (request, response) => 
 {
     const errors = validationResult(request);
     if (!errors.isEmpty()) return response.render("login", { errors: errors.array() } );
 
     try 
     {
-        const data = fs.readFileSync(path.resolve("./data/users.json"));
-        const users = JSON.parse(data);
-        
         const existingUser = users.find(user => user.email === request.body.loginEmail);
         if (!existingUser) return response.render("login", { errors: [{ msg: "Email not registered" }] });
     
-        if (existingUser.password !== request.body.loginPassword) return response.render("login", { errors: [{ msf: "Incorrect password" }] });
+        if (existingUser.password !== request.body.loginPassword) return response.render("login", { errors: [{ msg: "Incorrect password" }] });
     
         request.session.user = existingUser;
-        response.redirect("/");
+        response.redirect("/profile");
     } 
     catch (error) 
     {
@@ -109,10 +108,28 @@ exports.profilepage = async (request, response) =>
 {
     try 
     {
-        response.render("profile", { title: "FoodScript | Your Profile" } );    
+        if (!request.session.user) 
+        {
+            return response.redirect("/login");
+        }
+
+        const userRecipes = recipes.filter(recipe => recipe.email === request.session.user.email);
+        response.render("profile", { title: "FoodScript | Your Profile", userRecipes } );    
     } 
     catch (error) 
     {
         response.status(500).send( { message: error.message || "Error Occured" } );
     }
+}
+
+/**
+ * Log Out GET
+ */
+exports.logout = (request, response) => 
+{
+    request.session.destroy(function (error) 
+    {
+        if (error) console.log(error);
+        else response.redirect("/");
+    });
 }

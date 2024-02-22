@@ -1,2 +1,21 @@
 <h1 class="fs-xxl">Profile</h1>
 
+<button><a href="/logout" class="txt-white">Log Out</a></button>
+
+<div class="grid-4 g-3">
+<% if (userRecipes.length > 0) { %>
+    <% userRecipes.forEach(recipe => { %>
+        <div class="h-auto border br-2 overflow-hidden">
+            <img src="assets/uploads/<%= recipe.image %>" class="w-100" alt="<%= recipe.image %>">
+            <div class="p">
+                <h2><%= recipe.name %></h2>
+                <p class="txt-align-justify"><%= recipe.description %></p>
+                <div class="m-top-1 flex-align-center space-between">
+                    <button><a href="/edit-recipe/<%= recipe.id %>" class="txt-white">Edit</a></button>
+                    <button><a href="/delete-recipe/<%= recipe.id %>" class="txt-white">Delete</a></button>
+                </div>
+            </div>
+        </div>
+    <% }) %>
+<% } %>
+</div>
