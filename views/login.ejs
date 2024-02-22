@@ -1,0 +1,27 @@
+<h1 class="fs-xxl">Log In</h1>
+
+<!-- Log In Form Start -->
+<form action="/login" method="POST">
+
+    <% if (typeof errors !== 'undefined') { %>
+        <% errors.forEach(function(error) { %>
+            <p><%= error.msg %></p>
+        <% }) %>
+    <% } %>
+
+    <div>
+        <label for="loginEmail">Email:</label>    
+        <input type="email" name="loginEmail" id="loginEmail" required>
+    </div>
+    
+    <div>
+        <label for="loginPassword">Password:</label>
+        <input type="password" name="loginPassword" id="loginPassword" required>
+    </div>
+
+    <div>
+        <button type="submit">Log In</button>
+    </div>
+    
+</form>
+<!-- Log In Form End -->

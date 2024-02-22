@@ -1,9 +1,22 @@
 .main-wrapper {
     margin: auto;
     max-width: 1500px;
+    min-height: 100vh;
     background-color: var(--white);
+    position: relative;
 }
 
 .menu-bar { display: none; }
+
+.nav-mobile {
+    background-color: var(--white);
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.visible { display: inline-block; }
 
 .ingredients ol li:before { content: "- "; }

@@ -3,6 +3,7 @@
 
 /* text-decoration */
 .a-ul { text-decoration: underline; }
+.txt-align-center { text-align: center; }
 
 /* font-size */
 .fs-1 { font-size: 12px; }
@@ -27,11 +28,13 @@
 /* width */
 .w-25 { width: 25%; }
 .w-50 { width: 50%; }
+.w-75 { width: 75%; }
 .w-100 { width: 100%; }
 .w-160px { width: 160px; }
 .w-540 { width: 540px; }
 
 /* height */
+.h-75 { height: 75vh; }
 .h-260 { height: 260px; }
 .h-540 { height: 540px; }
 
@@ -53,6 +56,7 @@
     display: flex;
     flex-direction: column;
 }
+.align-center { align-items: center; }
 .space-between { justify-content: space-between; }
 
 /* display: grid */

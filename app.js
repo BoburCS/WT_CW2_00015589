@@ -12,9 +12,16 @@ app.use(express.static("public"));
 app.use(expressLayouts);
 
 // This three modules/packages mainly used for getting user image file and saving it to local data json file
-app.use(session( {secret: "FoodScriptSecretSession", saveUninitialized: true, resave: false, cookie: { secure: true } } ));
+app.use(session( {secret: "FoodScriptSecretSession", saveUninitialized: true, resave: false, cookie: { secure: false } } ));
 app.use(flash());
 app.use(fileUpload());
+
+// Main Page Changes if user logs in to their account or sign ups to their account
+app.use((request, response, next) => 
+{
+    response.locals.user = request.session.user;
+    next();
+});
 
 /**
  * View engine setup - EJS (Embedded JavaScript)

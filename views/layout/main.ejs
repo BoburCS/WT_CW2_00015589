@@ -42,22 +42,64 @@
                     </div>
 
                     <div class="navbar-right flex-align-center g-3">
-                        <button>Log In</button>
-                        <button>Sign Up</button>
+                        <% if (user) { %>
+                            <button>
+                                <a href="/profile" class="txt-white"><%= user.email %></a>
+                            </button>
+                        <% } else { %>
+                            <button>
+                                <a href="/login" class="txt-white">Log In</a>
+                            </button>
+                            <button>
+                                <a href="/signup" class="txt-white">Sign Up</a>
+                            </button>
+                        <% } %>
                     </div>
 
                     <div class="menu-bar">
-                        <button><i class="fa-solid fa-bars"></i></button>
+                        <button id="btnOpenMenubar"><i class="fa-solid fa-bars"></i></button>
                     </div>
 
                 </nav>
             </header>
             <!-- Header End -->
 
+
+
+            <!-- Menubar Start -->
+            <div class="nav-mobile w-75 h-75 ts">
+                <nav class="p-top-3 flex-column align-center g-3">
+                    <ul class="m-bottom-1 w-100 flex-column align-center g-3">
+                        <li class="p w-75 txt-align-center bb"><a href="/" class="fs-xl">Home</a></li>
+                        <li class="p w-75 txt-align-center bb"><a href="/about" class="fs-xl">About</a></li>
+                        <li class="p w-75 txt-align-center bb"><a href="/submit-recipe" class="fs-xl">Recipe</a></li>
+                        <li class="p w-75 txt-align-center bb"><a href="/contact" class="fs-xl">Contact</a></li>
+                    </ul>
+
+                    <% if (user) { %>
+                        <li class="p w-75 txt-align-center bb"><a href="/profile" class="fs-xl"><%= user.email %></a></li>
+                    <% } else { %>
+                        <button class="p w-50">
+                            <a href="/login" class="txt-white">Log In</a>
+                        </button>
+                        <button class="p w-50">
+                            <a href="/signup" class="txt-white">Sign Up</a>
+                        </button>
+                    <% } %>
+
+                    <button class="p w-50" id="btnCloseMenubar">x Close</button>
+                </nav>
+            </div>
+            <!-- Menubar End -->
+
+
+
             <!-- Main Start -->
 		    <main><%- body -%></main>
             <!-- Main End -->
         
+
+
             <!-- Footer Start -->
             <footer class="w-100">
 

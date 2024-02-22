@@ -2,13 +2,12 @@
   "name": "wt_cw2_00015589",
   "version": "1.0.0",
   "description": "Coursework Project from Web Technology module",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "00015589",
   "license": "ISC",
   "dependencies": {
     "connect-flash": "^0.1.1",
@@ -17,6 +16,7 @@
     "express-ejs-layouts": "^2.5.1",
     "express-fileupload": "^1.4.3",
     "express-session": "^1.18.0",
+    "express-validator": "^7.0.1",
     "nodemon": "^3.0.3",
     "uuid": "^9.0.1"
   }

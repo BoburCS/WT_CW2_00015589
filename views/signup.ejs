@@ -1,0 +1,27 @@
+<h1 class="fs-xxl">Sign Up</h1>
+
+<!-- Sign Up Form Start -->
+<form action="/signup" method="POST">
+
+    <% if (typeof errors !== 'undefined') { %>
+        <% errors.forEach(function(error) { %>
+            <p><%= error.msg %></p>
+        <% }) %>
+    <% } %>
+
+    <div>
+        <label for="signupEmail">Email:</label>    
+        <input type="email" name="signupEmail" id="signupEmail" required>
+    </div>
+    
+    <div>
+        <label for="signupPassword">Password:</label>
+        <input type="password" name="signupPassword" id="signupPassword" required>
+    </div>
+
+    <div>
+        <button type="submit">Sign Up</button>
+    </div>
+    
+</form>
+<!-- Sign Up Form End -->

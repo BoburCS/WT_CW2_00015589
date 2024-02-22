@@ -1,0 +1,24 @@
+<h1>Adminpage</h1>
+
+<table>
+    <h1>Users table</h1>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% if (users.length > 0) { %>
+            <% users.forEach(user => { %>
+                <tr>
+                    <td><%= user.id %></td>
+                    <td><%= user.email %></td>
+                    <td><%= user.password %></td>
+                </tr>
+            <% }) %>
+        <% } %>
+    </tbody>
+</table>

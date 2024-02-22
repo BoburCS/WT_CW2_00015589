@@ -1,8 +1,9 @@
 const fs = require("fs");
 const path = require("path");
 const { v4: uuid4 } = require("uuid"); // Creating random id that will not repeat for recipes
-const categoriesData = require("../data/categories.json");
-const recipesData = require("../data/recipes.json");
+const { validationResult } = require("express-validator");
+const categoriesData = require("../../data/categories.json");
+const recipesData = require("../../data/recipes.json");
 
 /**
  * Homepage Controller
@@ -161,4 +162,3 @@ exports.submitRecipePost = async (request, response) =>
         response.redirect("/submit-recipe");
     }
 }
-

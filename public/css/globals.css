@@ -78,6 +78,27 @@ img {
 
 ul, ol { list-style-type: none; }
 
+table {
+	margin: auto;
+	width: 100%;
+	border: 1px solid var(--black);
+}
+
+thead, tbody { width: 100%; }
+
+tr {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2px;
+}
+
+th, td { 
+	border: 1px solid var(--black); 
+	padding: 6px 8px;
+}
+
+td { text-align: right; }
+
 /* Breadcrumb */
 .breadcrumb { width: 100%; }
 
