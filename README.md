@@ -29,5 +29,46 @@ This app is recipe sharing platform where users can signin and signup, explore r
 
 ### Project structure
 
-. ├── app.js ├── .gitignore ├── package.json ├── package-lock.json ├── controllers │ ├── recipe │ │ └── index.js │ └── user │ └── index.js ├── data │ ├── categories.json │ ├── recipes.json │ └── users.json ├── public │ ├── assets │ │ ├── favicon │ │ ├── images │ │ └── uploads │ ├── css │ │ ├── globals.css │ │ ├── index.css │ │ ├── mobile.css │ │ ├── tablet.css │ │ └── utilities.css │ └── js │ └── index.js ├── routes │ └── index.js ├── validators │ └── index.js └── views ├── layout │ └── main.ejs ├── admin.ejs ├── categories.ejs ├── index.ejs ├── latest-recipes.ejs ├── login.ejs ├── profile.ejs ├── recipe.ejs ├── signup.ejs └── submitRecipe.ejs
+. ├── app.js 
+├── .gitignore 
+├── package.json 
+├── package-lock.json 
+├── controllers 
+│ ├── recipe 
+│ │ └── index.js 
+│ └── user 
+│ │ └──index.js 
+├── data 
+│ ├── categories.json 
+│ ├── recipes.json 
+│ └── users.json 
+├── public 
+│ ├── assets 
+│ │ ├── favicon 
+│ │ ├── images 
+│ │ └── uploads 
+│ ├── css 
+│ │ ├── globals.css 
+│ │ ├── index.css 
+│ │ ├── mobile.css 
+│ │ ├── tablet.css 
+│ │ └── utilities.css 
+│ └── js 
+│ | ├── index.js 
+├── routes 
+│ └── index.js 
+├── validators 
+│ └── index.js 
+└── views 
+├── layout 
+│ └── main.ejs 
+├── admin.ejs 
+├── categories.ejs 
+├── index.ejs 
+├── latest-recipes.ejs 
+├── login.ejs 
+├── profile.ejs 
+├── recipe.ejs 
+├── signup.ejs 
+└── submitRecipe.ejs
 
