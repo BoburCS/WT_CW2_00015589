@@ -15,16 +15,17 @@ This app is recipe sharing platform where users can signin and signup, explore r
 #### 5.Go to browser https://localhost:3000
 
 ### Dependencies list of the app
-
--connect-flash --> Enables temporary messages
--ejs --> Engine for generating HTML markup
--express --> Backend Web Framework for Node.js 
--express-ejs-layouts --> Layout support for EJS in Express
--express-fileupload --> Middleware for handling file uploads
--express-session --> Session management in Express
--express-validator --> Middleware for validating
--nodemon --> Automatically restarts server after the changes
--uuid --> Generates unique id for objects
+<ol>
+    <li>-connect-flash --> Enables temporary messages</li>
+    <li>-ejs --> Engine for generating HTML markup</li>
+    <li>-express --> Backend Web Framework for Node.js</li>
+    <li>-express-ejs-layouts --> Layout support for EJS in Express</li>
+    <li>-express-fileupload --> Middleware for handling file uploads</li>
+    <li>-express-session --> Session management in Express</li>
+    <li>-express-validator --> Middleware for validating</li>
+    <li>-nodemon --> Automatically restarts server after the changes</li>
+    <li>-uuid --> Generates unique id for objects</li>
+</ol>
 
 ### Project structure
 
