@@ -17,6 +17,6 @@
     transform: translateX(-50%);
 }
 
-.visible { display: inline-block; }
+.visible { display: inline-block !important; }
 
 .ingredients ol li:before { content: "- "; }
