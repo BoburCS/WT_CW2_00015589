@@ -72,3 +72,6 @@ This app is recipe sharing platform where users can signin and signup, explore r
 ├── signup.ejs 
 └── submitRecipe.ejs
 
+### The Web App is live on
+
+https://wt-cw2-00015589.onrender.com/
